@@ -1,5 +1,8 @@
-export const InputPassword = ({ placeholder, className }) => {
+export const InputPassword = ({ placeholder, className,name,register,errors }) => {
   return (
-    <input placeholder={placeholder} className={className} type="password" />
+    <>
+    <input placeholder={placeholder} className={className} name={name} {...register(name)} type="password" />
+    {errors[name] && <p className="text-red-500 text-sm">{errors[name].message}</p>}
+    </>
   );
 };

@@ -30,7 +30,6 @@ const LoginRegister = () => {
       
       {/* Form container */}
       <div className="w-full max-w-md p-6 bg-white rounded-2xl shadow-lg">
-        <form>
           {activeTab === "login" && (
             <div className="space-y-4">
               <LoginForm />
@@ -41,7 +40,6 @@ const LoginRegister = () => {
               <RegisterForm />
             </div>
           )}
-        </form>
       </div>
     </div>
   );
